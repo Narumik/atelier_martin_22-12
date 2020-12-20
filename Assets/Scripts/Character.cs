@@ -7,6 +7,7 @@ public class Character : MonoBehaviour
     public float HorizontalSpeed = 1;
     public float VerticalSpeed = 1;
 
+    /**
     void FixedUpdate()
 
     {
@@ -16,4 +17,5 @@ public class Character : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal,0.0f,moveVertical);
         GetComponent<Rigidbody>().AddForce(movement*speed*Time.deltaTime);
     }
+    **/
 }
