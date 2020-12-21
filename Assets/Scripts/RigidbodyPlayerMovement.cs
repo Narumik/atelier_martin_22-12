@@ -6,7 +6,6 @@ public class RigidbodyPlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody playerBody;
-
     private Vector3 inputVector;
     void Start()
     {
