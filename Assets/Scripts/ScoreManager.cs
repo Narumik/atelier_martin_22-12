@@ -17,7 +17,10 @@ public class ScoreManager : MonoBehaviour
    
     void Start()
     {
-        
+        if(PlayerPrefs.HasKey("BestLap"))
+        {
+            hiScoreCount = PlayerPrefs.GetFloat("BestLap");
+        }
     }
 
     void Update()
@@ -30,6 +33,7 @@ public class ScoreManager : MonoBehaviour
         if (scoreCount > hiScoreCount)
         {
             hiScoreCount = scoreCount;
+            PlayerPrefs.SetFloat("BestLap", hiScoreCount);
         }
 
         scoreText.text = "SCORE: " + Mathf.Round(scoreCount);
