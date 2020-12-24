@@ -6,8 +6,10 @@ public class CollisionSound : MonoBehaviour
 {
     public AudioSource collisionSound;
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider target)
     {
-        collisionSound.Play();
+        if(target.tag == "Item"){
+            collisionSound.Play();
+        }
     }
 }
