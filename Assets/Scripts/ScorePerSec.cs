@@ -6,9 +6,14 @@ using UnityEngine.UI;
 public class ScorePerSec : MonoBehaviour
 {
     public Text scoreText;
+
+    public Text highScore;
     public float scoreAmount;
+
+    public float highScoreAmount;
     public float pointIncreasedPerSec;
-    // Start is called before the first frame update
+  
+    public AudioSource collectSound;
     void Start()
     {
         scoreAmount = 0f;
@@ -16,10 +21,18 @@ public class ScorePerSec : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        scoreText.text = (int)scoreAmount + " Score";
+        scoreText.text = "SCORE: " + (int)scoreAmount;
         scoreAmount +=pointIncreasedPerSec * Time.deltaTime;
     }
+    
+    void OnTriggerEnter(Collider other){
+        collectSound.Play();
+        highScoreAmount = scoreAmount;
+        highScore.text = "HIGH SCORE: " + (int)highScoreAmount;
+        //highScore.GetComponent<Text>().text = "HIGH SCORE: " + scoreAmount;
+    }
+
+    
 }
