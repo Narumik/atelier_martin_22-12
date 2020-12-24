@@ -492,7 +492,7 @@ MonoBehaviour:
   scoreText: {fileID: 1713949643}
   hiscoreText: {fileID: 506371580}
   scoreCount: 0
-  hiScoreCount: 0
+  hiScoreCount: 5
   pointPerSec: 1
   scoreIncreasing: 1
 --- !u!4 &275782667

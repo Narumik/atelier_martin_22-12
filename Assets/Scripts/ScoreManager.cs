@@ -30,13 +30,13 @@ public class ScoreManager : MonoBehaviour
             scoreCount += pointPerSec * Time.deltaTime;
         }
 
-        if (scoreCount > hiScoreCount)
+        /*if (scoreCount > hiScoreCount)
         {
             hiScoreCount = scoreCount;
             PlayerPrefs.SetFloat("BestLap", hiScoreCount);
-        }
+        }*/
 
         scoreText.text = "LAP: " + Mathf.Round(scoreCount);
         hiscoreText.text = "BEST: " + Mathf.Round(hiScoreCount);
-        }
+    }
 }

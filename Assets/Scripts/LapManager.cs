@@ -13,6 +13,13 @@ public class LapManager : MonoBehaviour
     void OnTriggerEnter(Collider other){
         collectSound.Play();
         theScoreManager.scoreIncreasing = false;
+
+        if (theScoreManager.scoreCount > theScoreManager.hiScoreCount)
+        {
+            theScoreManager.hiScoreCount = theScoreManager.scoreCount;
+            PlayerPrefs.SetFloat("BestLap", theScoreManager.hiScoreCount);
+        }
+        
         theScoreManager.scoreCount = 0;
         theScoreManager.scoreIncreasing = true;
     }
