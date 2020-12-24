@@ -36,7 +36,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetFloat("BestLap", hiScoreCount);
         }
 
-        scoreText.text = "SCORE: " + Mathf.Round(scoreCount);
-        hiscoreText.text = "HIGH SCORE: " + Mathf.Round(hiScoreCount);
+        scoreText.text = "LAP: " + Mathf.Round(scoreCount);
+        hiscoreText.text = "BEST: " + Mathf.Round(hiScoreCount);
         }
 }

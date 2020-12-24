@@ -10,8 +10,7 @@ public class LapManager : MonoBehaviour
     {
         theScoreManager = FindObjectOfType<ScoreManager>();
     }
-    void OnTriggerEnter(Collider other)
-    {
+    void OnTriggerEnter(Collider other){
         collectSound.Play();
         theScoreManager.scoreIncreasing = false;
         theScoreManager.scoreCount = 0;
